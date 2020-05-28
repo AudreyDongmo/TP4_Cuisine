@@ -1,0 +1,527 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue1"
+    tools:context=".ui.home.HomeFragment">
+
+    <ImageView
+        android:id="@+id/left_arrows"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/arrows"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/refresh"
+        app:layout_constraintLeft_toRightOf="@id/left_arrows"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+    <ImageView
+        android:id="@+id/sort"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_sort_black_24dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toRightOf="@id/refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+
+
+    <RelativeLayout
+        android:id="@+id/gauche_droite"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:background="@drawable/top_left_and_bottom_rigth"
+        android:elevation="10dp"
+        android:gravity="center_horizontal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.666"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.144">
+
+        <TextView
+            android:id="@+id/header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="25dp"
+            android:gravity="center_horizontal"
+            android:text="@string/title1"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="60dp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/Nheader"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="65dp"
+            android:layout_toRightOf="@id/header"
+            android:gravity="center_horizontal"
+            android:text="@string/giga"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/below_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="100dp"
+            android:gravity="center_horizontal"
+            android:text="@string/stitle"
+            android:textAlignment="center"
+            android:textColor="@color/grey"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+    </RelativeLayout>
+
+    <ProgressBar
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:id="@+id/progess"
+        android:layout_width="350dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:layout_marginLeft="40dp"
+        android:indeterminate="false"
+        android:progress="15"
+        android:secondaryProgress="56"
+        android:progressBackgroundTint="@color/white"
+        android:progressDrawable="@drawable/barre"
+        app:layout_constraintTop_toBottomOf="@id/gauche_droite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+    <ImageView
+        android:id="@+id/image_used"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/ic_radio_button_checked_black_24dp"
+        app:layout_constraintTop_toBottomOf="@id/progess"
+        app:layout_constraintLeft_toLeftOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/text_used"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/used"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/image_used"
+        app:layout_constraintTop_toBottomOf="@id/progess"
+        app:layout_constraintVertical_bias="0.04"/>
+
+    <ImageView
+        android:id="@+id/image_delated"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="40dp"
+        android:layout_marginTop="15dp"
+        android:src="@drawable/blue_bouton"
+        app:layout_constraintTop_toBottomOf="@id/progess"
+        app:layout_constraintLeft_toRightOf="@id/text_used"
+        />
+
+    <TextView
+        android:id="@+id/text_deletable"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/deleted"
+        android:textSize="16dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toRightOf="@id/image_delated"
+        app:layout_constraintTop_toBottomOf="@id/progess"
+        app:layout_constraintVertical_bias="0.04"/>
+
+    <TextView
+        android:id="@+id/delectable"
+        android:layout_width="200dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:background="@drawable/bordure_haut_droite"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/text_used"
+        android:text="@string/delectable"
+        android:textColor="@color/white"
+        android:paddingTop= "10dp"
+        android:paddingLeft="30dp"
+        android:textSize="18dp"
+        />
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="100dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginLeft="50dp"
+        app:layout_constraintTop_toBottomOf="@id/image_delated"
+        app:layout_constraintLeft_toRightOf="@id/delectable"
+        android:background="@drawable/round_border"
+        android:orientation="horizontal">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:text="@string/storage"
+            android:textSize="20dp"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:text="@string/giga"
+            android:textSize="10dp"
+            android:textColor="@color/blue1"
+            />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="310dp"
+        android:background="@drawable/top_right_radius_white"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/delectable">
+        /ligne de junkcaches
+        <ImageView
+            android:id="@+id/balai"
+            android:layout_width="54dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="20dp"
+            android:src="@mipmap/ic_launcher_balayer_round" />
+
+        <TextView
+            android:id="@+id/junk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/balai"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/junkcakes"
+            android:textColor="@color/black1"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/m1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/balai"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="55dp"
+            android:text="1.31"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/m2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/m1"
+            android:layout_marginStart="30dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="55dp"
+            android:text="@string/giga"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m3"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/ic_crop_square_blue_24dp"
+            android:layout_alignLeft="@id/junk"
+            android:layout_marginStart="229dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="10dp"
+            android:text="1.31"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+        /ligne de App data
+
+        <ImageView
+            android:id="@+id/img_app"
+            android:layout_width="51dp"
+            android:layout_height="51dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@id/balai"
+            android:src="@drawable/app_file" />
+
+        <TextView
+            android:id="@+id/app_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/img_app"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="80dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/appdata"
+            android:textColor="@color/black1"
+            android:textSize="20dp"
+            />
+
+        <TextView
+            android:id="@+id/m_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/img_app"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="108dp"
+            android:text="@string/total"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+        <TextView
+            android:id="@+id/m1_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/m_data"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="108dp"
+            android:text="@string/taille1"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m2_data"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_brightness_1_black_24dp"
+            android:layout_alignLeft="@id/junk"
+            android:layout_marginStart="238dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="95dp"
+            />
+        /Ligne de App data
+
+        <ImageView
+            android:id="@+id/img_uninstall"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="15dp"
+            android:layout_below="@id/img_audio"
+            android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+        <TextView
+            android:id="@+id/uninstall_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/img_audio"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="89dp"
+            android:layout_alignParentTop="true"
+            android:layout_marginTop="190dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="App uninstall"
+            android:textColor="@color/black1"
+            android:textSize="20dp"
+            android:layout_below="@id/audio_data"
+            />
+
+        <TextView
+            android:id="@+id/total_uninstall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/img_uninstall"
+            android:layout_below="@id/uninstall_data"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="215dp"
+            android:text="@string/total"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/taille_uninstall"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/total_uninstall"
+            android:layout_alignParentTop="true"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="215dp"
+            android:text="@string/taille2"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m3_app"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_brightness_1_black_24dp"
+            android:layout_alignLeft="@id/junk"
+            android:layout_marginStart="238dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="195dp"
+            />
+
+        /derniere ligne celle de App unisntall
+
+        <ImageView
+            android:id="@+id/img_audio"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="0dp"
+            android:layout_below="@id/img_app"
+            android:src="@drawable/ic_play_circle_outline_black_24dp" />
+
+        <TextView
+            android:id="@+id/audio_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/img_audio"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/audio"
+            android:textColor="@color/black1"
+            android:textSize="20dp"
+            android:layout_below="@id/m2_data"
+            />
+
+        <TextView
+            android:id="@+id/total_audio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/img_audio"
+            android:layout_marginStart="69dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/total"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/taille_data"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/total_audio"
+            android:layout_marginStart="40dp"
+            android:layout_marginLeft="75dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="150dp"
+            android:text="@string/taille2"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m2_app"
+            android:layout_width="10dp"
+            android:layout_height="20dp"
+            android:src="@drawable/ic_brightness_1_black_24dp"
+            android:layout_alignLeft="@id/junk"
+            android:layout_marginStart="238dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="140dp"
+            />
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_delete_black_24dp"
+            android:layout_below="@id/total_uninstall"
+            android:layout_marginLeft="115dp"
+            android:layout_marginTop="25dp"
+            />
+        <TextView
+            android:id="@+id/checkup"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:background="@drawable/round_border"
+            android:layout_below="@id/total_uninstall"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="100dp"
+            android:textSize="18dp"
+            android:text="@string/checkup"
+            android:textColor="@color/black1"
+            android:textStyle="bold"
+            android:paddingTop="15dp"
+            android:paddingLeft="40dp"
+            android:alpha="0.5"/>
+
+
+
+
+
+    </RelativeLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

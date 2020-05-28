@@ -1,0 +1,57 @@
+<resources>
+    <string name="app_name">Exercice4_AudreyDongmo</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+    <string name="home_second">Home Second</string>
+    <string name="title1">1.31</string>
+    <string name="giga">GB</string>
+    <string name="mega">MB</string>
+    <string name="stitle">Cleanup suggested</string>
+    <string name="used">Used 22 GB</string>
+    <string name="deleted">Delectable 31GB</string>
+    <string name="delectable">Can be delected</string>
+    <string name="storage">31.11 </string>
+    <string name="junkcakes">Junk caches</string>
+    <string name="appdata">App data</string>
+    <string name="audio">App \&amp; video</string>
+    <string name="total">Total</string>
+    <string name="taille1">45.6 MB</string>
+    <string name="taille2">12.6 GB</string>
+    <string name="checkup">Checkup 1.31 GB</string>
+    <string name="Backgrounds">Backgrounds apps</string>
+    <string name="junkfile">App junk files</string>
+    <string name="Appcache">App caches</string>
+    <string name="cleanup">Cleanup will not affect normal use</string>
+    <string name="taille3">692 MB</string>
+    <string name="taille4">217 MB</string>
+    <string name="taille5">435 MB</string>
+    <string name="chiffre_ico1">12</string>
+    <string name="chiffre_ico2">11</string>
+    <string name="chiffre_ico3">20</string>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</resources>

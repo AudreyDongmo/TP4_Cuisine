@@ -1,0 +1,357 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/blue1"
+    tools:context=".ui.gallery.GalleryFragment">
+    <ImageView
+        android:id="@+id/left_arrows"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="10dp"
+        android:src="@drawable/arrows"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+    <ImageView
+        android:id="@+id/refresh"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="215dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/refresh"
+        app:layout_constraintLeft_toRightOf="@id/left_arrows"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+
+
+
+    <ImageView
+        android:id="@+id/sort"
+        android:layout_width="40dp"
+        android:layout_height="30dp"
+        android:layout_marginLeft="15dp"
+        android:layout_marginTop="8dp"
+        android:src="@drawable/ic_sort_black_24dp"
+        android:layout_marginRight="15dp"
+        app:layout_constraintLeft_toRightOf="@id/refresh"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.05"/>
+//vue du junk cakes
+    <TextView
+        android:id="@+id/junk"
+        android:layout_width="180dp"
+        android:layout_height="60dp"
+        android:background="@drawable/bordure_haut_droite"
+        android:text="@string/junkcakes"
+        android:textColor="@color/white"
+        android:paddingTop= "12dp"
+        android:paddingLeft="20dp"
+        android:textSize="22dp"
+        android:layout_marginTop="120dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        />
+    // petite fentre avec 1.31 GB
+
+    // COnstruction de la partie blanche avec un relativeLayout
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="120dp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="52dp"
+        android:layout_marginTop="136dp"
+        android:background="@drawable/round_border"
+        android:orientation="horizontal"
+        app:layout_constraintLeft_toRightOf="@id/junk"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="UnknownId">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="@string/title1"
+            android:textColor="@color/white"
+            android:textSize="30dp"
+            android:textStyle="bold"
+
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="28dp"
+            android:text="@string/giga"
+            android:textColor="@color/white"
+            android:textSize="10dp" />
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <RelativeLayout
+        android:id="@+id/footer"
+        android:layout_width="match_parent"
+        android:layout_height="570dp"
+        android:background="@drawable/top_right_radius_white"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/junk"
+        app:layout_constraintVertical_bias="0.0">
+
+        /ligne de junkcaches
+
+        <ImageView
+            android:id="@+id/fleche_bas"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/arrouws_bas" />
+
+        <TextView
+            android:id="@+id/app_bg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/fleche_bas"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/Backgrounds"
+            android:textColor="@color/black1"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/taille1"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/app_bg"
+            android:layout_marginStart="175dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="37dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:alpha="0.5"
+            android:background="@drawable/round_border"
+            android:paddingLeft="10dp"
+            android:text="@string/chiffre_ico1"
+            android:textColor="@color/black1"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/taille_app"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/app_bg"
+            android:layout_alignTop="@id/app_bg"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:text="@string/taille3"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m3"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_alignLeft="@id/taille1"
+            android:layout_marginStart="81dp"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="22dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/ic_crop_square_blue_24dp" />
+
+        //logne des app junk files
+
+        <ImageView
+            android:id="@+id/fleche2_bas"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/fleche_bas"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/arrouws_bas" />
+
+        <TextView
+            android:id="@+id/app_junk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_bg"
+            android:layout_alignLeft="@id/fleche2_bas"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/junkfile"
+            android:textColor="@color/black1"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/taille2"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taille1"
+            android:layout_alignLeft="@id/app_junk"
+            android:layout_marginStart="150dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:alpha="0.5"
+            android:background="@drawable/round_border"
+            android:paddingLeft="10dp"
+            android:text="@string/chiffre_ico2"
+            android:textColor="@color/black1"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/taille_caches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/app_junk"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="130dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:text="@string/taille4"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m3_junk"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/m3"
+            android:layout_alignLeft="@id/taille1"
+            android:layout_marginStart="81dp"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/ic_crop_square_blue_24dp" />
+
+        //ligne des app caches
+
+        <ImageView
+            android:id="@+id/fleche3_bas"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_below="@id/fleche2_bas"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/arrouws_bas" />
+
+        <TextView
+            android:id="@+id/app_caches"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/app_junk"
+            android:layout_alignLeft="@id/fleche3_bas"
+            android:layout_marginStart="49dp"
+            android:layout_marginLeft="89dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginBottom="40dp"
+            android:text="@string/Appcache"
+            android:textColor="@color/black1"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/taille3"
+            android:layout_width="35dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/taille2"
+            android:layout_alignLeft="@id/app_caches"
+            android:layout_marginStart="120dp"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="50dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:alpha="0.5"
+            android:background="@drawable/round_border"
+            android:paddingLeft="10dp"
+            android:text="@string/chiffre_ico3"
+            android:textColor="@color/black1"
+            android:textSize="15dp" />
+
+        <TextView
+            android:id="@+id/taille_junk"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/app_caches"
+            android:layout_marginLeft="71dp"
+            android:layout_marginTop="205dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:text="@string/taille5"
+            android:textColor="@color/grey"
+            android:textSize="15dp" />
+
+        <ImageView
+            android:id="@+id/m3_caches"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/m3_junk"
+            android:layout_alignLeft="@id/taille1"
+            android:layout_marginStart="81dp"
+            android:layout_marginLeft="51dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="40dp"
+            android:layout_marginRight="40dp"
+            android:src="@drawable/ic_crop_square_blue_24dp" />
+        //ligne du cleanup
+
+        <Button
+            android:id="@+id/clean"
+            android:layout_width="350dp"
+            android:layout_height="70dp"
+            android:layout_below="@id/app_caches"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="110dp"
+            android:background="@drawable/rounder_border_gray"
+            android:fontFamily="serif"
+            android:text="@string/cleanup"
+            android:textColor="@color/black1" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/clean"
+            android:layout_marginLeft="120dp"
+            android:layout_marginTop="65dp"
+            android:src="@drawable/ic_delete_black_24dp" />
+
+        <TextView
+            android:id="@+id/checkup"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:layout_below="@id/clean"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="50dp"
+            android:alpha="0.5"
+            android:background="@drawable/round_border"
+            android:paddingLeft="40dp"
+            android:paddingTop="15dp"
+            android:text="@string/checkup"
+            android:textColor="@color/black1"
+            android:textSize="18dp"
+            android:textStyle="bold" />
+
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
